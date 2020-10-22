@@ -1,0 +1,210 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Contact page.
+// -----------------------------------------------------------------------------
+
+.contact-section {
+    .contact-wrapper {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .heading {
+
+        h3 {
+            font-weight: 800;
+        }
+
+        p {
+            font-size: $font-size-base;
+            color: $gray-200;
+        }
+    }
+
+    .contact-form {
+        .contact-form-inner {
+            background-color: #f7f7f7;
+            border-radius: 5px;
+
+            .custom-form {
+                padding: 0px 5px;
+            }
+        }
+    }
+
+    .contact-numbers-inner {
+        background-color: #717679;
+        height: 100%;
+        background-image: url('../images/rocket-contact-bg.png');
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+
+        &:after {
+            content: '';
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(113, 118, 121, 1));
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+
+            @media screen and (max-height: 414px) {
+                height: 100%;
+            }
+
+            @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+                height: 50%;
+            }
+        }
+
+        @include respond-below(md) {
+            min-height: 470px;
+        }
+
+        @media screen and (max-height: 414px) {
+            background-size: cover;
+            background-position: top center;
+            min-height: 300px;
+        }
+
+        @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+            background-position: bottom center;
+            background-size: auto;
+        }
+
+        .title {
+            background-color: $purple;
+            color: $white;
+            position: relative;
+            z-index: 1;
+
+            h5 {
+                color: $white;
+            }
+        }
+    }
+
+    .contact-list {
+        position: relative;
+        z-index: 1;
+    }
+
+    .contact-numbers {
+        .icon {
+            color: $yellow;
+            font-size: 19px;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            display: flex;
+        }
+
+        ul {
+            li {
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                padding-left: 40px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    color: $white;
+                    font-weight: 300;
+                    text-decoration: none;
+                    transition: all ease 0.3s;
+
+                    @include respond-below(md) {
+                        display: block;
+                    }
+
+                    +a:before {
+                        margin: 0px 13px;
+                        content: "|";
+                        color: $yellow;
+                        width: 1px;
+                        height: 100%;
+                        vertical-align: middle;
+
+                        @include respond-below(md) {
+                            display: none;
+                        }
+
+                        @media screen and (max-height: 414px) {
+                            display: inline-block;
+                        }
+                    }
+
+                    &:hover {
+                        color: $yellow;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+/* contact paginate */
+.contact-paginate{
+    .icon {
+        color: $yellow;
+        font-size: 19px;
+        // position: absolute;
+        // left: 0;
+        // top: 3px;
+        // display: flex;
+    }
+
+    ul {
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            padding-left: 40px;
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: $black;
+                font-weight: 300;
+                text-decoration: none;
+                transition: all ease 0.3s;
+
+                @include respond-below(md) {
+                    display: block;
+                }
+
+                +a:before {
+                    margin: 0px 13px;
+                    content: "|";
+                    color: $yellow;
+                    width: 1px;
+                    height: 100%;
+                    vertical-align: middle;
+
+                    @include respond-below(md) {
+                        display: none;
+                    }
+
+                    @media screen and (max-height: 414px) {
+                        display: inline-block;
+                    }
+                }
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}

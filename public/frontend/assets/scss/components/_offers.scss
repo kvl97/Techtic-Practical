@@ -1,0 +1,57 @@
+.offers{
+    border: 1px solid #D8E0E2;
+    margin-top: 25px;
+    background-color: #f5f5f5;
+    
+    &--cashback-content{
+        line-height: 35px;
+        color: #322f2e;
+        text-align: center;
+        border: 1px dashed rgba(91,87,86,0.6);
+        border-radius: 10px;
+        padding: 10px;
+    }
+    &--big-font{
+        font-size: 24px;
+        font-weight: bold;
+        display: block;
+        line-height: 33px;
+    }
+    &--small-font{
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 25px;
+        text-transform: uppercase;
+    }
+    &--card-content{
+        color: #322f2e;
+        
+        a{
+            color: #322f2e;
+        }
+    }
+    &--get-code{
+        text-align: center;
+        font-size: 14px;
+        color: #322f2e;
+    }
+    &--code-link{
+        text-align: center;
+        color: #7068c3;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 3px;
+        border: 2px dashed #7068c3;
+        padding: 11px;
+        display: block;
+        margin-bottom: 9px;
+    }
+    ul{
+        padding-left: 20px;
+    }
+    li{
+        list-style: initial;
+    }
+}

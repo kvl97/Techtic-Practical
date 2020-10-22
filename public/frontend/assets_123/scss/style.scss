@@ -1,0 +1,50 @@
+@charset 'UTF-8';
+
+/* theme fonts goes here */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+
+// bootstrap
+@import 'abstracts/variables', // variables override into bootstrap variables;
+		'vendors/bootstrap/bootstrap';
+
+@import 'abstracts/mixins';
+
+// Base stuff
+@import
+	'base/fonts',
+	'base/typography',
+	'base/buttons',
+	'base/helpers',
+	'base/forms';
+
+// Vendors
+@import
+	'vendors/slick',
+	'vendors/fancybox',
+	'vendors/jquery-ui',
+	'vendors/mCustomScrollbar',
+	'vendors/select2';
+
+// Components
+@import
+	'components/header',
+	'components/device-menu',
+	'components/hero-banner',
+	'components/inquiry-form',
+	'components/services-home',
+	'components/testimonial',
+	'components/services-card',
+	'components/50-50-promo',
+	'components/reasons',
+	'components/faq',
+	'components/footer';
+
+// Page-specific styles
+@import
+	'pages/home',
+	'pages/login',
+	'pages/quote-detail',
+	'pages/contact',
+	'pages/about',
+	'pages/kiosk-information',
+	'pages/default'; //global style code goes here

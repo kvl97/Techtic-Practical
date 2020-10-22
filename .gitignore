@@ -1,0 +1,16 @@
+/node_modules
+/public/storage
+/public/files
+/public/images
+/storage/*.key
+/vendor
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+node_modules
+.sass-cache
+files
+/storage
+/config/constant.php
+/composer.lock

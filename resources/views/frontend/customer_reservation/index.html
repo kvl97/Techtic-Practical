@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<table style="background-color: #f0f0f9; width:100%; max-width: 950px;
+margin: 0 auto;">
+    <tr>
+        <td style="padding: 30px;">
+            
+            <table style="position: relative; display: block; background-color: #dcdcf3; border-radius: 10px 10px 0 0;">
+                <tr>
+                    <td style="padding: 20px;">
+                        <table>
+                            <tr>
+                                <td style="display: inline-block;background-color: #fff;border-radius: 50px;padding: .5em 1.5em;">
+                                    <strong>Reservation No. : </strong><span>{{ $reservation_record['v_reservation_number']}}</span>
+                                </td>
+
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+            <table style="background-color:#fff;">
+                <tr>
+                    <td style="padding: 30px 25px;">
+                        <table>
+                            <tr>
+                                <td>
+                                    <table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+                                        <tr>
+                                            <td align="left" style="text-transform: uppercase; font-weight: 700; color: #000;background-color: #f0f0f9; padding: 1rem 20px;width:50%;border: 1px solid #ccc;">
+                                                <table>
+                                                    <tr>
+                                                        <th style="width:100%">
+                                                            Main Traveler
+                                                        </th>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="height:10px;" height="10px"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" style="display: inline-block; vertical-align: top; position: relative; width: 100px; color: #000; font-weight: 500; word-break: break-all;text-transform: capitalize;padding: 0; vertical-align: top;">
+                                                            Name:
+                                                        </td>
+                                                        <td align="left" style="width:600px; text-align:left;text-transform: capitalize;padding: 0; vertical-align: top;color: #565656;">
+                                                            John Doe
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="height:10px;" height="10px"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="display: inline-block;
+vertical-align: top;
+position: relative;
+width: 100px;
+color: #000;
+font-weight: 500;
+word-break: break-all;text-transform: capitalize;">
+                                                            Email:
+                                                        </td>
+                                                        <td style="text-transform: capitalize; width:600px;color: #565656;">
+                                                            example@gmail.com
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="height:10px;" height="10px"></td>
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td style="display: inline-block;
+vertical-align: top;
+position: relative;
+width: 100px;
+color: #000;
+font-weight: 500;
+word-break: break-all;text-transform: capitalize;">
+                                                            Phone:
+                                                        </td>
+                                                        <td style="text-transform: capitalize; width:600px;color: #565656; ">
+                                                            7412489632
+                                                        </td>
+                                                    </tr>
+
+                                                </table>
+                                            </td>
+                                            <td style="width:1px;" width="1px"></td>
+                                            <td align="right" style="text-transform: uppercase; font-weight: 700; color: #000;background-color: #fff; width:48%;">
+                                                <table>
+                                                    <tr style="border: 1px solid #ccc;
+border-radius: 10px;">
+                                                        <td style="padding:20px; background-color:#f0f0f9;width:140px;"> <strong> Total Traveler </strong> </td>
+                                                        <td style="padding:20px;"> 01 </td>
+                                                    </tr>
+                                                    <tr style="height:10px;" height="10px"></tr>
+                                                    <tr style="border: 1px solid #ccc;
+border-radius: 10px;">
+                                                        <td style="padding:20px; background-color:#f0f0f9;width:160px;"> <strong> booked trip </strong></td>
+                                                        <td style="padding:20px;"> Round Trip </td>
+                                                    </tr>
+                                                    <tr style="height:10px;" height="10px"></tr>
+                                                    <tr style="border: 1px solid #ccc;
+border-radius: 10px;">
+                                                        <td style="padding:20px; background-color:#f0f0f9;width:140px;"> <strong> TOTAL FARE </strong></td>
+                                                        <td style="padding:20px;"> $100.00 </td>
+                                                    </tr>
+
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            
+        <table style="background-color:#fff;">
+        <tr>
+        <td style="padding:10px 25px 30px 25px;">
+        <table style="border: 1px solid #ccc; background-color:#fff; margin:0 0 20px 0;">
+                <tr>
+                    <td>
+                        <table style="background-color:#f0f0f9;">
+                            <tr>
+                                <td style="padding:20px 30px 10px 30px;"> <strong>1st Leg of Travel </strong></td>
+                                <td style="text-align:right;padding:20px 30px 10px 30px;"> <strong> Date: 09/30/2020 </strong> </td>
+                            </tr>
+                        </table> 
+                        <table>
+                            <tr>
+                                <td style="padding:20px 30px 10px 30px;"> Arlington <span>(Snohomish County)</span> to Seattle <span>(King County)</span></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0 30px 10px 30px;">
+                                    <strong>To arrive at <span>Seattle</span> between </strong> :
+                                    <span>14:00 (2:00pm)</span> and <span>16:15 (4:15pm)</span>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td style="padding:10px 10px 20px 25px;">
+                                    <table style="background-color:#f0f0f9;width:100%;">
+                                        <tr>
+                                            <td style="color:#000; padding:20px 15px;">
+                                                Pickup Location
+                                                <span style="color:width:100%;display:block;">Arlington (Snohomish Country)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;padding:5px 15px;color:#565656;">
+                                                <span style="width:150px;color:#000;">
+                                                    <strong>Address :&nbsp;&nbsp;</strong> </span>208 South Weste Avenue
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:10px;" height="10px"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;padding:5px 15px;color:#565656;">
+                                                <span style="width:150px;color:#000;">
+                                                    <strong>City :&nbsp;&nbsp;</strong> </span>Arlington
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:10px;" height="10px"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;padding:5px 15px;color:#565656;">
+                                                <span style="width:150px;color:#000;">
+                                                    <strong>Zipcode :&nbsp;&nbsp;</strong> </span>98223-1553
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:10px;" height="10px"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;padding:5px 15px;color:#565656;">
+                                                <span style="width:150px;color:#000;">
+                                                    <strong>County :&nbsp;&nbsp;</strong> </span>Snohomish County
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:20px;" height="20px"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                
+                                <td style="padding:10px 25px 20px 10px;">
+                                    <table style="background-color:#f0f0f9;width:100%;">
+                                        <tr>
+                                            <td style="color:#000; padding:20px 15px;">
+                                                Pickup Location
+                                                <span style="color:width:100%;display:block;">Arlington (Snohomish Country)</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;padding:5px 15px;color:#565656;">
+                                                <span style="width:150px;color:#000;">
+                                                    <strong>Address :&nbsp;&nbsp;</strong> </span>208 South Weste Avenue
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:10px;" height="10px"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;padding:5px 15px;color:#565656;">
+                                                <span style="width:150px;color:#000;">
+                                                    <strong>City :&nbsp;&nbsp;</strong> </span>Arlington
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:10px;" height="10px"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;padding:5px 15px;color:#565656;">
+                                                <span style="width:150px;color:#000;">
+                                                    <strong>Zipcode :&nbsp;&nbsp;</strong> </span>98223-1553
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:10px;" height="10px"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-size:14px;padding:5px 15px;color:#565656;">
+                                                <span style="width:150px;color:#000;">
+                                                    <strong>County :&nbsp;&nbsp;</strong> </span>Snohomish County
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:20px;" height="20px"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                
+                            </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <td style="padding:0 25px;">
+                                    <strong>Arrival Flight Details</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height:5px;" height="5px"> </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0 0 0 25px;">
+                                    <span style="width:8px; height:8px;background-color:#5d59a6;border-radius:100%;display: inline-block;
+                                    vertical-align: middle;;" width="8px" height="8px"></span>
+                                    <span><strong>Flight Type</strong></span>
+                                    <span style="color:#565656">: Domestic </span>
+                                </td>
+                                
+                                <td align="left" style="padding: 0 0 0 0px; text-align:left;">
+                                    <span style="width:8px; height:8px;background-color:#5d59a6;border-radius:100%;display: inline-block;
+                                    vertical-align: middle;;" width="8px" height="8px"></span>
+                                    <span><strong>Airline</strong></span>
+                                    <span style="color:#565656">: Delta </span>
+                                </td>
+                                
+                                <td align="left" style="padding: 0 0 0 0px; text-align:left;">
+                                    <span style="width:8px; height:8px;background-color:#5d59a6;border-radius:100%;display: inline-block;
+                                    vertical-align: middle;;" width="8px" height="8px"></span>
+                                    <span><strong>Flight #</strong></span>
+                                    <span style="color:#565656">: 41  </span>
+                                </td>
+                                
+                                <td align="left" style="padding: 0 0 0 0px; text-align:left;">
+                                    <span style="width:8px; height:8px;background-color:#5d59a6;border-radius:100%;display: inline-block;
+                                    vertical-align: middle;;" width="8px" height="8px"></span>
+                                    <span><strong>Flight Time</strong></span>
+                                    <span style="color:#565656">: 12:45 </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="height:20px;" height="20px"> </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table style="border: 1px solid #ccc; background-color:#fff; margin:0 0 20px 0;">
+                            <tr>
+                                <td>
+                                    <table style="background-color:#f0f0f9;">
+                            <tr>
+                                <td style="padding:20px 30px 10px 30px; text-transform:uppercase;"> <strong>breakdown of Charges</strong></td>
+                            </tr>
+                        </table>
+                                <table>
+                                    <tr>
+                                        <td style="padding:20px 0 20px 25px;">
+                                            <span> <strong> Fares </strong> </span>
+                                            <span style="color:#565656; font-weight:600;"> : Test Record </span>
+                                        </td>
+                                        
+                                        <td style="padding:20px 25px 20px 0;">
+                                            <span> <strong> Other Charges </strong> </span>
+                                            <span style="color:#565656; font-weight:600;"> : $10 </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:00px 0 20px 25px;">
+                                            <span> <strong> Mode of Payment </strong> </span>
+                                            <span style="color:#565656; font-weight:600;"> : Test Record </span>
+                                        </td>
+                                        
+                                        <td style="padding:00px 25px 20px 0;">
+                                            <span> <strong> Payment Status </strong> </span>
+                                            <span style="color:#565656; font-weight:600;"> : Test Record </span>
+                                        </td>
+                                    </tr>
+                                </table> 
+                                </td>
+                            </tr>
+                        </table>
+        <table style="border: 1px solid #ccc; background-color:#fff; padding:10px 0 0 0;">
+                                        <thead>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <th style="text-align: left;background-color: #f0f0f9;border: 1px solid #ccc;text-transform: uppercase;padding: 10px;">fare details</th>
+                                                <th style="text-align: left;background-color: #f0f0f9;border: 1px solid #ccc;text-transform: uppercase;padding: 10px;text-align:center;">1st leg </th>
+                                                <th style="text-align: left;background-color: #f0f0f9;border: 1px solid #ccc;text-transform: uppercase;padding: 10px; text-align:center;">2nd leg</th>
+                                                <th style="text-align: left;background-color: #f0f0f9;border: 1px solid #ccc;text-transform: uppercase;padding: 10px; text-align:center;">total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; border-right:1px solid #ccc;">Adult Fare: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;"><span>0</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Companion Details: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;"><span>0</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Child Fare: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;"><span>0</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Infant Details: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;"><span>0</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Military Fare: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;"><span>0</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Senior Fare: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;"><span>0</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+        
+            
+            <table style="border: 1px solid #ccc; background-color:#fff;  margin:20px 0 20px 0;">
+                                        <thead>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <th style="text-align: left;background-color: #f0f0f9;border: 1px solid #ccc;text-transform: uppercase;padding: 10px;">Luggage Charge Details</th>
+                                                <th style="text-align: left;background-color: #f0f0f9;border: 1px solid #ccc;text-transform: uppercase;padding: 10px;text-align:center; width:140px;"></th>
+                                                <th style="text-align: left;background-color: #f0f0f9;border: 1px solid #ccc;text-transform: uppercase;padding: 10px; text-align:center;width:140px;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; border-right:1px solid #ccc;">Adult Fare: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Companion Details: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Child Fare: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Infant Details: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Military Fare: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid #ccc;">
+                                                <td style="padding: 10px; text-align:left;border-right:1px solid #ccc;">Senior Fare: (0)</td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                                <td style="padding: 10px; text-align:center;border-right:1px solid #ccc;"><span>0</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+        <table>
+            <tr>
+                <td>*Must travel with Full Fare Adult </td>
+            </tr>
+            <tr>
+                <td>
+                    **Must tell us in advance
+                </td>
+            </tr>
+        </table>                            
+                                    </td>
+                                    </tr>
+            </table>                              
+        </td>
+    </tr>
+</table>
+
+                
+
+</body>
+</html>

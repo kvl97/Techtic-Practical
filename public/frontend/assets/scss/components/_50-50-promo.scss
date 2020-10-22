@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the 50-50-promo of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- 50-50-promo ---*/
+.img-content-promo {
+
+    h4 {
+        font-weight: 700;
+        font-family: $font-family-heading;
+    }
+
+    p {
+        font-size: $font-size-sm;
+    }
+
+    a {
+        text-decoration: none;
+        transition: all ease 0.3s;
+
+        &:hover {
+            color: $gray;
+        }
+    }
+
+    .promo-image {
+        @include respond-below(md) {
+            height: 300px;
+        }
+    }
+
+    .promo-content {
+        position: relative;
+        z-index: 1;
+        background-color: #fff5e5;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            display: block;
+            width: 100px;
+            height: 100%;
+            top: 0;
+            left: -40px;
+            z-index: -1;
+            background-color: inherit;
+            transform-origin: bottom left;
+            -ms-transform: skew(-6deg, 0deg);
+            -webkit-transform: skew(-6deg, 0deg);
+            transform: skew(-6deg, 0deg);
+
+            @include respond-below(lg) {
+                -ms-transform: skew(-5deg, 0deg);
+                -webkit-transform: skew(-5deg, 0deg);
+                transform: skew(-5deg, 0deg);
+            }
+
+            @include respond-below(md) {
+                -ms-transform: skew(0deg, -6deg);
+                -webkit-transform: skew(0deg, -6deg);
+                transform: skew(0deg, -6deg);
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    .promo-content-inner {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.promo-listing {
+    li {
+        font-size: 20px;
+        font-weight: 500;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 20px;
+
+        @include respond-below(md) {
+            font-size: $font-size-base;
+        }
+
+        &:after {
+            content: '';
+            background-color: $purple;
+            width: 6px;
+            height: 18px;
+            left: 0;
+            top: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+        }
+    }
+}

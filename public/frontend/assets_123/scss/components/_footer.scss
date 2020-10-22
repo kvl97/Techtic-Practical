@@ -1,0 +1,283 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- footer ---*/
+.main-footer {
+    width: 100%;
+    height: auto;
+    line-height: normal;
+    background-color: theme-color("secondary");
+
+    p {
+        color: $gray-400;
+        font-weight: 500;
+    }
+
+    a {
+        color: $gray-400;
+        transition: all ease 0.3s;
+        text-decoration: none;
+
+        @include respond-below(lg) {
+            font-size: $font-size-sm;
+        }
+
+        &:hover {
+            color: $white;
+        }
+    }
+
+    .useful-links {
+        li {
+            margin-bottom: 10px;
+            width: 50%;
+
+            @include respond-below(lg) {
+                width: 100%;
+            }
+
+            @include respond-below(md) {
+                width: 50%;
+            }
+
+            @include respond-below(sm) {
+                width: 50%;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .title {
+        font-family: $font-family-heading;
+        font-size: 20px;
+        font-weight: 700;
+        color: #dedede;
+
+        @include respond-below(sm) {
+            font-size: 18px;
+        }
+    }
+
+    .sub-title {
+        color: #bbbbbb;
+
+        @include respond-below(sm) {
+            font-size: 15px;
+        }
+    }
+
+    .footer-info {
+        padding-right: 60px;
+
+        @include respond-below(lg) {
+            padding-right: 15px;
+        }
+
+        p {
+            font-size: $font-size-sm;
+        }
+    }
+
+    .logo-footer {
+        display: block;
+        max-width: 200px;
+
+        @include respond-below(xl) {
+            max-width: 160px;
+        }
+
+        @include respond-below(sm) {
+            max-width: 130px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .hours {
+        display: flex;
+
+        @include respond-below(lg) {
+            flex-direction: column;
+        }
+
+        span {
+            color: $white;
+            font-size: $font-size-sm;
+            margin-right: 10px;
+            padding-top: 1px;
+        }
+    }
+
+    .footer-contact {
+        li {
+            margin-bottom: 15px;
+
+            @include respond-below(sm) {
+                margin-bottom: 10px;
+            }
+
+            .icon {
+                color: $primary;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .social {
+        display: flex;
+        align-items: center;
+
+        p {
+            font-family: $font-family-heading;
+            font-size: 20px;
+            font-weight: 700;
+            color: #dedede;
+            margin-bottom: 0;
+        }
+
+        ul {
+            display: flex;
+            margin-left: 15px;
+
+            li {
+                margin: 0px 5px;
+
+                a {
+                    font-size: 24px;
+                    height: 42px;
+                    width: 42px;
+                    background-color: #4e5154;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    transition: all ease 0.3s;
+
+                    @include respond-below(lg) {
+                        height: 35px;
+                        width: 35px;
+                        font-size: 18px;
+                    }
+
+                    &:hover {
+                        background-color: $primary;
+                    }
+
+                    .icon {
+                        display: flex;
+
+                        &:before {
+                            transition: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    overflow: hidden;
+    background-color: #313539;
+
+    .footer-bottom-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond-below(md) {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+    }
+
+    p {
+        margin: 0;
+        color: #cdcbe8;
+        position: relative;
+        line-height: 1.5;
+        font-weight: 400;
+        font-size: $font-size-sm;
+    }
+
+    .copyright {
+        position: relative;
+        padding: 15px 40px 15px 0px;
+        background-color: $primary;
+
+        @include respond-below(lg) {
+            padding: 15px 15px 15px 0;
+        }
+
+        @include respond-below(md) {
+            padding: 12px 0px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: -100%;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: inherit;
+            pointer-events: none;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -25px;
+            height: 100%;
+            width: 100%;
+            background-color: inherit;
+            pointer-events: none;
+            transform: skew(-30deg);
+
+            @include respond-below(lg) {
+                right: -15px;
+            }
+
+            @include respond-below(md) {
+                right: 0;
+                left: 100%;
+                transform: none;
+            }
+        }
+    }
+
+    ul {
+        li {
+            padding: 0px 10px;
+            position: relative;
+            line-height: 1;
+
+            &:after {
+                content: '';
+                width: 1px;
+                height: 10px;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                background: #404041;
+            }
+
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+
+            a {
+                color: #6f6f70;
+                font-size: $font-size-sm;
+            }
+        }
+    }
+}

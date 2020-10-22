@@ -1,0 +1,154 @@
+/**
+ * Basic typography style for copy text
+ */
+
+body {
+    color: $black;
+}
+
+// Heading style
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $font-family-heading;
+}
+
+h1,
+.h1 {
+    @include fontSize($h1-font-size);
+
+    @include respond-below(xl) {
+        @include fontSize($h1-font-size / 1.2);
+    }
+
+    @include respond-below(md) {
+        @include fontSize($h1-font-size / 1.8);
+    }
+
+    @include respond-below(sm) {
+        @include fontSize($h1-font-size / 2.4);
+    }
+}
+
+h2,
+.h2 {
+    @include fontSize($h2-font-size);
+
+    @include respond-below(xl) {
+        @include fontSize($h2-font-size / 1.2);
+    }
+
+    @include respond-below(md) {
+        @include fontSize($h2-font-size / 1.4);
+    }
+
+    @include respond-below(sm) {
+        @include fontSize($h2-font-size / 1.6);
+    }
+}
+
+h3,
+.h3 {
+    @include fontSize($h3-font-size);
+
+    @include respond-below(xl) {
+        @include fontSize($h3-font-size / 1.2);
+    }
+
+    @include respond-below(sm) {
+        @include fontSize($h3-font-size / 1.3);
+    }
+}
+
+h4,
+.h4 {
+    @include fontSize($h4-font-size);
+
+    @include respond-below(sm) {
+        @include fontSize($h4-font-size / 1.2);
+    }
+}
+
+h5,
+.h5 {
+    @include fontSize($h5-font-size);
+}
+
+
+p {
+    line-height: 1.6;
+    font-size: $font-size-base;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    em {
+        font-size: 20px;
+
+        @include respond-below(md) {
+            font-size: $font-size-lg;
+        }
+
+        @include respond-below(sm) {
+            font-size: 18px;
+        }
+    }
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+
+    &.custom-list {
+        li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            line-height: 1.7;
+            color: $gray;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:after {
+                content: "\64";
+                position: absolute;
+                pointer-events: none;
+                font-family: "rocket-transportation" !important;
+                line-height: 1;
+                color: $primary;
+                left: 0;
+                top: 3px;
+                font-size: 20px;
+                transform: rotate(180deg);
+                text-shadow: 0 0 0 $primary;
+            }
+        }
+    }
+}
+
+
+a {
+    transition: all ease 0.3s;
+
+    &:hover {
+        color: $secondary;
+        text-decoration: none;
+    }
+}

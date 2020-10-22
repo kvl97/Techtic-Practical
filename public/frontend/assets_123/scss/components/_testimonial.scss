@@ -1,0 +1,97 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Testimonial of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- Testimonial ---*/
+.testimonial {
+    position: relative;
+    background-color: #24406b;
+
+    .testimonial-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.1;
+        pointer-events: none;
+    }
+
+    .block-inner {
+        color: $white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        // padding: 0px 40px;
+
+        @include respond-below(md) {
+            margin-bottom: 20px;
+            // padding: 0px 50px;
+        }
+    }
+
+    p {
+        color: #aab1be;
+        font-size: 18px;
+
+        @include respond-below(sm) {
+            font-size: 16px;
+        }
+    }
+
+    .sub-title {
+        text-transform: uppercase;
+        font-size: $font-size-base;
+        color: $white;
+        font-family: $font-family-heading;
+        font-weight: 700;
+    }
+
+    .title {
+        position: relative;
+
+        &:before {
+            content: 'o';
+            position: absolute;
+            pointer-events: none;
+            font-family: rocket-transportation !important;
+            line-height: 1;
+            color: $white;
+            font-size: 50px;
+            top: 30px;
+            transform: translateY(-50%) rotate(180deg);
+            left: -70px;
+            opacity: 0.5;
+
+            @include respond-below(xl) {
+                font-size: 40px;
+                top: 25px;
+                left: -60px;
+            }
+
+            @include respond-below(md) {
+                font-size: 35px;
+                top: 20px;
+                left: -55px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 28px;
+                top: 18px;
+                left: -45px;
+            }
+        }
+
+        &:after {
+            content: '';
+            pointer-events: none;
+            background: url('../images/testimonial-title-bg.png') no-repeat center/cover;
+            width: 50px;
+            height: 2px;
+            display: block;
+            margin: 20px auto;
+        }
+    }
+}

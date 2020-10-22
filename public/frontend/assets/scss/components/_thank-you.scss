@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the thank you block  of the site/application.
+// -----------------------------------------------------------------------------
+
+/* thank you page */
+
+.thank-you-block {
+    position: relative;
+    height: 650px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include respond-below(md) {
+        height: 500px;
+    }
+    .container {
+        height: 100%;
+    }
+    &-inner {
+        img {
+            max-width: 100px;
+        }
+        .h3 {
+            font-family: $font-family-base;
+            font-weight: 600;
+        }
+        p {
+            font-size: $font-size-lg;
+            color: $gray-100;
+            @include respond-below(xl) {
+                font-size: $font-size-base;
+            }
+        }
+    }
+}

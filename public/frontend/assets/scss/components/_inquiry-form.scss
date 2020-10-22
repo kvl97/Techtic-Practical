@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Inquiry form of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- Inquiry form ---*/
+.inquiry-form {
+    margin-top: -140px;
+    position: relative;
+
+    @include respond-below(md) {
+        margin-top: -100px;
+    }    
+
+    &-wrapper {
+        border-radius: 5px;
+        background-color: $white;
+        box-shadow: 0px 3px 15px 0px rgba(2, 0, 20, 0.25);
+        overflow: hidden;
+    }
+
+    .form-bottom {        
+        background-color: $black;
+
+        .form-group {
+            margin: 10px 0px;
+        }
+
+        p {
+            color: $white;
+            margin: 0 10px 0 0;
+            font-size: $font-size-base;
+
+            @include respond-below(sm) {
+                font-size: $font-size-sm;
+            }
+        }
+    }
+    
+    .ps-info {
+        width: 100%;
+        max-width: 70px;
+    }
+
+    input {
+        @at-root &.ps-digit {
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: none;
+            font-size: $font-size-base;
+            background-color: $white;
+            padding: 0 15px !important;
+        }
+    }
+
+    .submit-btn {
+
+        input[type=submit] {
+            min-width: 230px;
+            font-weight: 600;
+
+            @include respond-below(md) {
+                min-width: 185px;
+            }
+        }
+    }
+}

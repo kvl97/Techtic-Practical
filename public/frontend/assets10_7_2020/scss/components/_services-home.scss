@@ -1,0 +1,86 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Srvices home of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- Srvices home ---*/
+.services-home {
+    .services-block {
+        .block-inner {
+            display: flex;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 100%;
+            transition: all ease 0.3s;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #f0f0f9;
+
+                .services-icon {
+                    background-color: $primary;
+
+                    .white-img {
+                        opacity: 1;
+                    }
+
+                    .purple-img {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .services-icon {
+                position: relative;
+                width: 100%;
+                max-width: 79px;
+                min-width: 79px;
+                height: 79px;
+                border: 1px solid $primary;
+                border-radius: 50%;
+                overflow: hidden;
+
+                @include respond-below(md) {
+                    max-width: 60px;
+                    min-width: 60px;
+                    height: 60px;
+                }
+
+                img {
+                    max-width: 45px;
+                    width: 100%;
+                    transition: all ease 0.3s;
+
+                    @include respond-below(md) {
+                        max-width: 35px;
+                    }
+                }
+
+                .white-img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    opacity: 0;
+                }
+            }
+
+            .services-text {
+
+                h4 {
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: $gray;
+
+                    @include respond-below(sm) {
+                        font-size: 20px;
+                    }
+                }
+
+                p {
+                    color: $gray-200;
+                    font-size: $font-size-sm;
+                }
+            }
+        }
+    }
+}

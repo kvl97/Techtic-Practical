@@ -1,0 +1,235 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- header ---*/
+.main-header {
+    width: 100%;
+    height: auto;
+    background-color: $white;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 50px;
+        width: 25%;
+        background-color: $gray-500;
+        pointer-events: none;
+
+        @media only screen and (max-width: 991px) {
+            display: none;
+        }
+    }
+
+    .logo {
+        max-width: 233px;
+        display: block;
+
+        @include respond-below(xl) {
+            max-width: 160px;
+        }
+
+        @include respond-below(sm) {
+            max-width: 130px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    @at-root .header-info-top {
+
+        @include respond-below(lg) {
+            flex-wrap: wrap;
+        }
+
+        .icon {
+            margin-right: 5px;
+
+            &:before {
+                font-size: 20px;
+            }
+
+            &.icon-user-half {
+                &:before {
+                    font-size: 18px;
+                }
+            }
+            &.reverse {
+                transform: rotate(180deg);
+                display: inline-block;
+                color: $white;
+            }
+        }
+
+        .btn {
+            font-weight: 600;
+            text-transform: capitalize;
+
+            &-xs {
+                text-transform: capitalize;
+                font-weight: 400;
+            }
+        }
+
+        .accout-login {
+            button {
+                font-weight: 400;
+            }
+        }
+    }
+
+    /* nav */
+    nav {
+        position: relative;
+        height: auto;
+        background-color: $gray-500;
+        padding-left: 10px;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -20px;
+            height: 100%;
+            width: 100%;
+            background-color: inherit;
+            pointer-events: none;
+            transform: skew(-30deg);
+        }
+
+        ul {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+
+            li {
+                padding: 13px 19px;
+                margin: 0;
+                list-style: none;
+                display: inline-block;
+
+                @include respond-below(xl) {
+                    padding: 13px 10px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $gray;
+                    transition: all ease 0.3s;
+                    font-weight: 500;
+                    font-family: $font-family-sans-serif;
+
+                    @include respond-below(xl) {
+                        font-size: $font-size-sm;
+                    }
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+
+                &.active {
+                    a {
+                        color: $red;
+                    }
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    &.header-inner {
+        border-bottom: 3px solid $gray-500;
+    }
+
+    .login-btn-group {
+        margin-right: 45px;
+
+        @include respond-below(sm) {
+            margin-right: 35px;
+        }
+
+        a {
+            font-size: $font-size-lg;
+            border: 1px solid;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0px 5px;
+
+            @include respond-below(sm) {
+                font-size: $font-size-base;
+                width: 30px;
+                height: 30px
+            }
+
+            .icon {
+                display: flex;
+                
+                &.reverse {
+                    transform: rotate(180deg);
+                    color: $white;
+                }
+            }
+
+            &.register-btn {
+                color: $yellow;
+            }
+        }
+
+        .accout-login {
+            a {
+                border-radius: 0;
+                border: 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .4);
+                width: auto;
+                height: auto;
+                margin: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                text-align: left;
+                text-transform: capitalize;
+                font-weight: 400;
+                font-size: $font-size-sm;
+
+                .icon {
+                    margin-right: 10px;
+                }
+            }
+
+            .dropdown-toggle {
+                padding: 0;
+                width: 35px;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $font-size-lg;
+
+                @include respond-below(sm) {
+                    font-size: $font-size-base;
+                    width: 30px;
+                    height: 30px
+                }
+
+                .icon {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

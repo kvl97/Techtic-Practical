@@ -1,0 +1,42 @@
+.select2-container--default .select2-search--dropdown {
+    display: block !important;
+   
+}
+.select2-search__field{
+    color: #565656 !important;
+}
+#frontend_payment .form-group .custom-radio-block {
+	margin:0;
+}
+.btn-xxs{
+    padding: .25rem .5rem;font-size: .775rem;line-height: 1;border-radius: 1rem;
+}
+
+.info-not-added{
+    text-align: center;color: #dc0e00;
+}
+
+/* PAYMENT HISTORY CSS */
+.status_failed_color {
+    color: #FF0000 !important;
+}
+.status_success_color {
+    color: #008000 !important;
+}
+.type_refund_color {
+    color: #8c0404 !important;
+    font-weight: 500;
+}
+/*front-reservation-table*/
+.thed-darkslateblue{
+    background-color:darkslateblue;color: white;font-size: 0.90rem;
+}
+.reservation_log_details {
+    margin-top: 20px;
+}
+.reservation_log_details, .reservation_log_details th, .reservation_log_details td, .reservation_log_details tr {
+    border-color: #ccc;
+}
+.reservation_log_details thead {
+    background-color: #f0f0f9;
+}

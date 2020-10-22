@@ -1,0 +1,126 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+/* buttons */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    @extend .btn;
+    -webkit-appearance: button;
+}
+
+.btn {
+    font-size: $font-size-base;
+    padding: 7px 21px;
+    color: $white;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 30px;
+    background-color: $primary;
+    transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border-color 0.3s ease 0s;
+    font-weight: 600;
+
+    @include respond-below(sm) {
+        font-size: $font-size-sm;
+    }
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: $white !important;
+        text-decoration: none;
+        background-color: $secondary !important;
+        outline: none;
+        box-shadow: none;
+        border-color: $secondary !important;
+    }
+
+    &-link {
+        margin-bottom: 2px;
+        color: $primary;
+        font-size: $font-size-base;
+        border-bottom: 1px solid $primary;
+        text-decoration: none;
+        transition: all ease 0.3s;
+
+        &:hover,
+        &:focus {
+            color: $secondary;
+            text-decoration: none;
+        }
+    }
+
+    &-lg {
+        padding: 14px 53px;
+
+        @include respond-below(lg) {
+            padding: 14px 43px;
+        }
+
+        @include respond-below(md) {
+            padding: 10px 33px;
+        }
+    }
+
+    &-md {
+        padding: 12px 30px;
+
+        @include respond-below(md) {
+            padding: 10px 15px;
+        }
+    }
+
+    &-sm {
+        padding: 7px 21px;
+    }
+
+    &-xs {
+        padding: 8px 15px;
+        font-size: $font-size-sm;
+    }
+
+
+    &-yellow {
+        background-color: $yellow !important;
+        border-color: $yellow !important;
+
+        .icon {
+            color: $yellow;
+        }
+    }
+
+    &-purple {
+        background-color: $purple !important;
+        border-color: $purple !important;
+
+        .icon {
+            color: $purple;
+        }
+    }
+
+    &-red {
+        background-color: $red !important;
+        border-color: $red !important;
+
+        .icon {
+            color: $red;
+        }
+    }
+
+    &-reverse {
+        background-color: transparent !important;
+        color: $black !important;
+
+        &:hover,
+        &:focus {
+            color: $white !important;
+
+            .icon {
+                color: $white !important;
+            }
+        }
+    }
+}

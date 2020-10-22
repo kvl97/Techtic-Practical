@@ -1,0 +1,283 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the Quote detail page.
+// -----------------------------------------------------------------------------
+
+.quote-detail {
+    .form-wrapper {
+        border-radius: 10px;
+        background-color: $gray-500;
+        overflow: hidden;
+    }
+
+    .heading {
+        h3 {
+            font-weight: 600;
+        }
+    }
+
+    .custom-list {
+        li {
+            font-size: $font-size-sm;
+            padding-right: 25px;
+            font-weight: 500;
+            color: $gray-200;
+
+            &:after {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .form-top {
+        background-color: $gray-300;
+        position: relative;
+
+        &:after {
+            content: '';
+            left: 0;
+            right: 0;
+            bottom: -15px;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background-color: inherit;
+            margin: 0px auto;
+            transform: rotate(45deg);
+        }
+
+        p {
+            font-weight: 600;
+        }
+    }
+
+    input[type=email],
+    input[type=number],
+    input[type=password],
+    input[type=search],
+    input[type=tel],
+    input[type=text],
+    select,
+    textarea {
+        background-color: $white;
+        font-size: $font-size-base;
+
+        @include respond-below(sm) {
+            font-size: $font-size-sm;
+        }
+    }
+
+    .custom-radio-wrapper {
+
+        [type=radio]:checked+label,
+        [type=radio]:not(:checked)+label {
+            color: $gray-100;
+
+            &:before {
+                border: 1px solid #cdcdcd;
+            }
+        }
+    }
+
+    .btn {
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.3);
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    p {
+        margin: 0;
+        line-height: 1.3;
+        font-size: $font-size-base;
+        font-weight: 500;
+
+        @include respond-below(lg) {
+            font-size: $font-size-sm;
+        }
+    }
+
+    .select2-container--default {
+        .select2-selection--single {
+            background-color: $white !important;
+            font-weight: 400;
+            padding: 0 15px !important;
+
+            .select2-selection__rendered {
+                font-size: $font-size-base;
+            }
+        }
+    }
+}
+
+// quote-counter-from
+.counter-from {
+    border: 1px solid $gray-600;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .select2-container--default {
+        .select2-selection--single {
+            height: $input-height-base - 10px !important;
+
+            .select2-selection__rendered {
+                color: $gray-100 !important;
+                padding-left: 0;
+            }
+        }
+    }
+
+    .counter-title {
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+
+        @include respond-below(sm) {
+            padding: 15px;
+        }
+
+        .icon {
+            color: $purple;
+            margin-left: 8px;
+
+            @include respond-below(sm) {
+                margin-left: 4px;
+            }
+
+            &:before {
+                font-size: 22px;
+
+                @include respond-below(sm) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .counter-block {
+        border-bottom: 1px solid $gray-600;
+
+        &:last-child {
+            border: none;
+        }
+
+        .btn-block {
+            padding: 0;
+            width: auto;
+
+            .btn {
+                padding-top: 8px;
+                padding-bottom: 8px;
+                box-shadow: none;
+                color: #000;
+                font-weight: 400;
+                min-width: 120px;
+
+                @include respond-below(sm) {
+                    min-width: 100px;
+                }
+            }
+        }
+    }
+
+    .counter-dropdown {
+        border-left: 1px solid $gray-600;
+        background-color: $gray-300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+
+        @include respond-below(sm) {
+            border-left: none;
+            justify-content: space-between;
+        }
+    }
+
+    .select-field {
+        width: 120px;
+        margin: 0px auto;
+
+        @include respond-below(sm) {
+            margin: 0px;
+            width: 100px;
+        }
+
+        &::after {
+            font-size: 11px;
+            right: 11px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: $gray-300;
+            width: 1px;
+            height: 100%;
+            right: 32px;
+            z-index: 1;
+        }
+
+        select {
+            height: 40px;
+            font-weight: 400;
+        }
+    }
+
+    .custom-checkbox {
+        @extend .flex-center;
+
+        label {
+            margin: 0 auto;
+
+            &:before {
+                margin: 0;
+                background-color: $white;
+            }
+        }
+    }
+}
+
+
+.shared-shuttle-quote {
+    border-radius: 25px;
+
+    @include respond-below(sm) {
+        text-align: center;
+    }
+}
+
+// no-of-travelers
+.no-of-travelers {
+    input {
+        width: auto;
+        height: 40px;
+        width: 120px;
+
+        @include respond-below(sm) {
+            width: 120px;
+        }
+    }
+}
+
+.charge-btn {
+    .btn-block {
+        margin: 0;
+
+        .btn {
+            padding-top: 7px;
+            padding-bottom: 7px;
+            box-shadow: none;
+            color: $black;
+            font-weight: 400;
+            min-width: 120px;
+
+            @include respond-below(md) {
+                width: 100%;
+            }
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}

@@ -1,0 +1,222 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the login page.
+// -----------------------------------------------------------------------------
+
+.login-section {
+    .login-wrapper {
+        position: relative;
+        overflow: hidden;
+
+        &.login-form-wrapper {
+            height: calc(100vh - 509px);
+            min-height: 620px;
+
+            @include respond-below(lg) {
+                height: auto;
+            }
+        }
+    }
+
+    .heading {
+        text-align: center;
+        margin-bottom: 15px;
+
+        h3 {
+            font-weight: 700;
+        }
+
+        p {
+            font-size: $font-size-base;
+            color: $gray-200;
+        }
+    }
+
+    .login-form {
+        display: flex;
+        align-items: center;
+        padding-left: calc((100vw - 1170px)/2);
+        position: relative;
+        background-color: $white;
+        z-index: 1;
+        @extend .skew-bg;
+
+        @include respond-below(xl) {
+            padding-left: 15px;
+        }
+
+        @include respond-below(md) {
+            margin-bottom: 70px;
+        }
+
+        @include respond-below(sm) {
+            margin-bottom: 90px;
+        }
+
+        .login-form-inner {
+            position: relative;
+            max-width: 400px;
+
+            @include respond-below(xl) {
+                padding: 0;
+                max-width: 360px;
+            }
+
+            @include respond-below(lg) {
+                margin: 0px auto;
+            }
+
+            @include respond-below(md) {
+                max-width: 100%;
+                padding: 0px 10px;
+            }
+        }
+
+        input[type=submit] {
+            width: 100%;
+        }
+
+        .custom-radio-wrapper {
+
+            [type=radio]:checked+label,
+            [type=radio]:not(:checked)+label {
+                color: $gray-100;
+
+                &:before {
+                    border: 1px solid #cdcdcd;
+                }
+            }
+        }
+
+        .select2-container--default {
+            .select2-selection--single {
+                background-color: $white !important;
+                font-weight: 400;
+                padding: 0 !important;
+                border: none !important;
+                border-bottom: 1px solid $gray-600 !important;
+                border-radius: 0 !important;
+
+                .select2-selection__rendered {
+                    font-size: $font-size-base;
+                    padding-left: 0;
+                    padding-right: 25px;
+                    color: $gray-200;
+
+                    @include respond-below(lg) {
+                        font-size: $font-size-sm;
+                    }
+                }
+            }
+        }
+    }
+
+    .login-banner-image {
+        position: relative;
+
+        @include respond-below(md) {
+            height: 400px;
+        }
+
+        @include respond-below(sm) {
+            height: 300px;
+        }
+    }
+
+    .ellipse {
+        background-color: $purple;
+        border-radius: 50%;
+        color: $white;
+        width: 300px;
+        height: 300px;
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: -10%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        transition: all ease 0.5s;
+
+        @include respond-below(xl) {
+            width: 270px;
+            height: 270px;
+            left: -20%;
+        }
+
+        @include respond-below(lg) {
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @include respond-below(md) {
+            top: 10%;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            height: 94%;
+            width: 94%;
+            border: 4px solid rgba($white, 0.3);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        h3 {
+            font-weight: 700;
+        }
+
+        p {
+            color: #c8c7de;
+            font-size: $font-size-base;
+
+            @include respond-below(xl) {
+                font-size: $font-size-sm;
+            }
+        }
+    }
+}
+
+// skew-bg
+.skew-bg {
+    &:after {
+        content: " ";
+        position: absolute;
+        display: block;
+        width: 500%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        background-color: inherit;
+        transform-origin: bottom left;
+        -ms-transform: skew(-12deg, 0deg);
+        -webkit-transform: skew(-12deg, 0deg);
+        transform: skew(-12deg, 0deg);
+
+        @include respond-below(lg) {
+            -ms-transform: skew(-7deg, 0deg);
+            -webkit-transform: skew(-7deg, 0deg);
+            transform: skew(-7deg, 0deg);
+        }
+
+        @include respond-below(md) {
+            -ms-transform: skew(0deg, 4deg);
+            -webkit-transform: skew(0deg, 4deg);
+            transform: skew(0deg, 4deg);
+            bottom: -85px;
+            top: auto;
+            width: 100%;
+        }
+    }
+}
+
+@include respond-between(lg, xl) {}
+
+@include respond-above(sm) {}
+
+@include respond-below(md) {}

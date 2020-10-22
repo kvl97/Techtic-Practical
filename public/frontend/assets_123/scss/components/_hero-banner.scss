@@ -1,0 +1,137 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Home banner of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- Home banner ---*/
+.hero-section {
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-wrapper {
+        height: 800px;
+        position: relative;
+        overflow: hidden;
+        padding: 100px 0px;
+
+        @media only screen and (max-width: 1366px) {
+            height: 700px;
+        }
+
+        @include respond-below(xl) {
+            height: 600px;
+            padding: 80px 0px;
+        }
+
+        @include respond-below(lg) {
+            height: 550px;
+            padding: 40px 0px;
+        }
+
+        @include respond-below(sm) {
+            height: 400px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            margin: 0px auto;
+            pointer-events: none;
+            background: url('../../assets/images/hero-bg.png');
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .hero-inner {
+        position: relative;
+        z-index: 1;
+        color: $white;
+        text-transform: uppercase;
+        margin-bottom: 120px;
+
+        @include respond-below(xl) {
+            margin-bottom: 100px
+        }
+
+        h1 {
+            color: $white;
+        }
+
+        p {
+            font-size: 27px;
+            font-family: $font-family-heading;
+            line-height: 1;
+
+            @include respond-below(xl) {
+                font-size: 23px;
+            }
+
+            @include respond-below(md) {
+                font-size: 20px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .button-group {
+        .btn {
+            min-width: 230px;
+            font-weight: 600;
+
+            @include respond-below(lg) {
+                min-width: 185px;
+                font-size: $font-size-sm;
+            }
+        }
+    }
+}
+
+
+// Inner banner
+.inner-hero-banner {
+    background-color: $black;
+    color: $white;
+
+    .inner-banner-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0.4;
+    }
+
+    .hero-wrapper {
+        height: 200px;
+        z-index: 1;
+
+        @include respond-below(lg) {
+            height: 160px;
+        }
+
+        @include respond-below(sm) {
+            height: 150px;
+        }
+    }
+
+    h1 {
+        font-size: 40px;
+
+        @include respond-below(lg) {
+            font-size: $h3-font-size;
+        }
+    }
+}

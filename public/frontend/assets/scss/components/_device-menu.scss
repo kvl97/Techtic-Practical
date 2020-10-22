@@ -1,0 +1,240 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+/* responsive nav for small devices */
+.mobilenav {
+    @at-root .hamburger {
+        display: flex;
+        height: 50px;
+        width: 50px;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &:not(.close) {
+            position: absolute;
+            top: 18px;
+            right: 10px;
+            z-index: 99;
+
+            @include respond-below(md) {
+                top: 10px;
+            }
+
+            @include respond-below(sm) {
+                top: 5px;
+                right: 5px;
+            }
+        }
+
+        &.close {
+            padding: 10px;
+
+            .wrap {
+                position: relative;
+                display: block;
+                width: 30px;
+                height: 30px;
+            }
+
+            .line {
+                position: absolute;
+                top: calc(50% - 2px);
+                width: 100%;
+                margin: 0;
+                transform: rotate(45deg);
+                background-color: $white;
+
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .line {
+            display: block;
+            width: 30px;
+            margin: 6px auto;
+            height: 4px;
+            background-color: $purple;
+
+            @include respond-below(sm) {
+                width: 25px;
+                margin: 4px auto;
+            }
+        }
+
+        .wrap {
+            display: block;
+        }
+
+    }
+
+    .menu-state {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        z-index: 999;
+        width: 80%;
+        max-width: 450px;
+        background-color: $black;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &.is-open {
+        .menu-state {
+            left: 0;
+        }
+    }
+
+    .nav-logo {
+        padding: 15px;
+
+        .logo {
+            display: block;
+            max-width: 160px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    ul {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        ul {
+            display: none;
+            background-color: #1d1a35;
+
+            ul {
+                background-color: #1a172d;
+            }
+        }
+
+        li {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            &.active {
+                a {
+                    color: $red;
+                    font-weight: 700;
+                }
+            }
+
+            .caret {
+                position: absolute;
+                top: 3px;
+                right: 2px;
+                display: block;
+                width: 36px;
+                height: 36px;
+                cursor: pointer;
+
+                &:not(.trigger-caret) {
+                    pointer-events: none;
+                }
+
+                &:after,
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    display: block;
+                    margin: auto;
+                    width: 20px;
+                    height: 2px;
+                    background: $white;
+                }
+
+                &:after {
+                    transform: rotate(-90deg);
+                    transition: all .2s ease;
+                }
+            }
+
+            &.is-open {
+                >.caret:after {
+                    transform: rotate(0);
+                }
+            }
+
+            a {
+                z-index: 2;
+                display: block;
+                padding: 10px 15px;
+                cursor: pointer;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+                font-size: $font-size-base;
+                text-decoration: none;
+                color: $white;
+            }
+
+            &.has-sub {
+                >a {
+                    padding-right: 40px;
+                }
+            }
+
+            li {
+                a {
+                    padding-left: 30px;
+                    font-size: 16px;
+                }
+
+                li {
+                    a {
+                        padding-left: 50px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .nav-backdrop {
+        position: fixed;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-in;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    &.is-open {
+        .nav-backdrop {
+            opacity: 1;
+            z-index: 999;
+            visibility: visible;
+        }
+    }
+
+    .menu-outer {
+        max-height: calc(100vh - 80px);
+        padding-bottom: 60px;
+        overflow-y: auto;
+    }
+}

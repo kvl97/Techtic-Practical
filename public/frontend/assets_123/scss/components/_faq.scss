@@ -1,0 +1,88 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the "FAQ section" of the site/application.
+// -----------------------------------------------------------------------------
+
+/* FAQ section */
+.faq-section {
+
+    .title {
+        margin-bottom: 20px;
+        color: $gray;
+
+        @include respond-below(md) {
+            padding: 0px 20px;
+        }
+    }
+
+    .faq-wrapper {
+        &.show-all {
+            .faq-block {
+                display: block;
+            }
+        }
+    }
+
+    .faq-block {
+        transition: all ease 0.3s;
+        border-radius: 5px;
+		background-color: $primary;
+		border: 1px solid $primary;
+        position: relative;		
+		overflow: hidden;        
+
+        .accordian-title {
+            color: $white;
+            position: relative;
+            margin: 0;
+            padding-right: 50px;
+            font-weight: 500;
+            cursor: pointer;
+			width: 100%;
+			
+			@include respond-below(xl) {
+				padding-right: 45px;
+			}
+
+            .icon {
+                position: absolute;
+                right: 25px;
+                top: 50%;
+                transform: translateY(-50%);
+				transition: all ease 0.3s;
+				font-size: 20px;
+				color: $gray-500;
+
+				@include respond-below(xl) {
+					right: 15px;
+				}
+            }
+        }
+
+        &.active {
+            .accordian-title {
+                .icon {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+        }
+
+        .faq-content {
+			display: none;
+			background-color: $white;
+
+            p {
+                color: $gray-200;
+            }
+
+            ul {
+                padding-left: 0;
+
+                li {
+					display: block;
+					margin-bottom: 5px;
+					color: $gray-200;
+                }
+            }
+        }
+    }
+}

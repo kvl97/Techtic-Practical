@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Reasons of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- Reasons ---*/
+.reasons-section {
+    .block-inner {
+        padding: 40px;
+        text-align: center;
+        border-radius: 5px;
+        height: 100%;
+    }
+
+    h5 {
+        font-weight: 700 !important;
+    }
+
+    .yellow-bg {
+        background-color: #fff5e5;
+    }
+
+    .purper-bg {
+        background-color: #ecedf4;
+    }
+
+    .red-bg {
+        background-color: #fae6e5;
+    }
+
+    .gray-bg {
+        background-color: #e5e5e5;
+    }
+}

@@ -1,0 +1,88 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the My profile page.
+// -----------------------------------------------------------------------------
+
+/* my profile */
+.profile-quick-links {
+    padding: 0px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: $gray-500;
+    @include respond-below(sm) {
+        padding: 0;
+    }
+    ul {
+        display: flex; 
+        align-items: center; 
+        flex-wrap: wrap;
+        @include respond-below(sm) {
+            flex-direction: column;
+        }
+        li {
+            margin: 0px 15px; 
+            position: relative;
+            @include respond-below(sm) {
+                margin: 0; 
+                width: 100%;
+            }
+            &.active {
+                a {
+                    color: $red;
+                }
+            }
+            &:hover {
+                > a {
+                    color: $red;
+                }
+                > ul {
+                    opacity: 1;  
+                    visibility: visible; 
+                    pointer-events: all;
+                }
+            }
+            a {
+                padding: 15px 0px; 
+                display: block; 
+                color: $gray; 
+                transition: all ease 0.3s;
+                @include respond-below(sm) {
+                    padding: 7px 15px;
+                }
+                &:hover {
+                    color: $red;
+                }
+            }
+            .icon-down-arrow {
+                font-size: 12px;
+                vertical-align: middle;
+                margin-left: 5px;
+                &:before {
+                    transition: none;
+                }
+            }
+        }
+        ul {
+            min-width: 200px; 
+            position: absolute; 
+            top:100%; 
+            left: 0; 
+            opacity: 0; 
+            visibility: hidden; 
+            z-index: 99; 
+            border: 1px solid $gray-500; 
+            background-color: $white;
+            border-radius: 0 0 5px 5px; 
+            box-shadow: 0 5px 10px rgba(66, 62, 62, 0.1); 
+            pointer-events: none; 
+            transition: all ease 0.3s;
+            li {
+                margin: 0; 
+                width: 100%;
+                a {
+                    padding: 10px 15px; 
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

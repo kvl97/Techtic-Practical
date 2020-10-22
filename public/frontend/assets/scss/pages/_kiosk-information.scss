@@ -1,0 +1,222 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the kiosk information page.
+// -----------------------------------------------------------------------------
+
+.kiosk-information {
+    color: $white;
+    overflow: hidden;
+    font-family: $font-family-admin;
+
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $font-family-admin;
+        font-weight: 600;
+    }
+
+    .info-block {
+        div {
+            font-size: 22px;
+            font-weight: 500;
+
+            @include respond-below(xl) {
+                font-size: 18px;
+            }
+
+            @include respond-below(md) {
+                padding: 10px 20px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgba($white, 0.3);
+
+                &:last-child {
+                    border: none;
+                }
+
+                &:before {
+                    content: attr(data-title) ": ";
+                    font-weight: 600;
+                    width: 50%;
+                    min-width: 50%;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-bottom: 5px;
+
+                    @media (max-width: 375px) {
+                        width: 100%
+                    }
+                }
+            }
+
+            @include respond-below(sm) {
+                font-size: $font-size-base;
+            }
+
+            @media (max-width: 375px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    .kiosk-slider,
+    .sticky-header {
+        padding: 0 30px;
+
+        @include respond-below(sm) {
+            padding: 0 25px;
+        }
+    }
+
+    .container {
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        // display: flex;
+        // flex-wrap: wrap;
+        // align-items: center;
+        // justify-content: center;
+    }
+
+    .information-block {
+        padding: 30px 0;
+        width: 100%;
+    }
+
+    .info-block-inner {
+        height: 100%;
+    }
+
+    .info-header,
+    .info-footer {
+        h3 {
+            font-size: 26px;
+
+            @include respond-below(md) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.2;
+            color: #fff;
+
+            small {
+                font-weight: 600;
+            }
+        }
+
+        .logo {
+            display: block;
+            max-width: 210px;
+            margin: 0px auto;
+
+            @include respond-below(sm) {
+                max-width: 150px;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .info-block-header {
+        font-size: 22px;
+        font-weight: 600;
+
+        @include respond-below(xl) {
+            font-size: 18px;
+        }
+
+        @include respond-below(md) {
+            display: none;
+        }
+    }
+
+    @include respond-below(md) {
+        .w {
+
+            &-10,
+            &-20,
+            &-30,
+            &-40,
+            &-50,
+            &-60,
+            &-70,
+            &-80,
+            &-90 {
+                width: 100%;
+            }
+        }
+    }
+
+    .slick-arrow {
+        transition: all ease 0.3s;
+
+        &.slick-next,
+        &.slick-prev {
+            background: transparent;
+            opacity: 0.6;
+
+            &:before {
+                font-size: 25px;
+                font-weight: 600;
+            }
+
+            &:hover,
+            &:focus {
+                opacity: 1;
+                background: transparent;
+
+                &:before {
+                    color: $white;
+                }
+            }
+        }
+
+        &.slick-next {
+            right: -100px;
+
+            @include respond-below(xl) {
+                right: -50px;
+            }
+
+            @include respond-below(lg) {
+                right: -30px;
+            }
+
+            @include respond-below(md) {
+                right: -10px;
+            }
+
+        }
+
+        &.slick-prev {
+            left: -100px;
+
+            @include respond-below(xl) {
+                left: -50px;
+            }
+
+            @include respond-below(lg) {
+                left: -30px;
+            }
+
+            @include respond-below(md) {
+                left: -10px;
+            }
+        }
+    }
+}

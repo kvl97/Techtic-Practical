@@ -1,0 +1,510 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the form component.
+// -----------------------------------------------------------------------------
+form {
+    width: 100%;
+    &.custom-form {
+        .form-group {
+            padding-right: 10px;
+            padding-left: 10px;
+            transition: all ease 0.5s;
+            margin-bottom: 1.5rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &.focused {
+                .form-label {
+                    transform: translateY(-13px);
+                    font-size: 13px;
+                    color: $gray;
+                    font-weight: 600;
+                }
+            }
+            &.not-valid,
+            &.is-invalid {
+                .form-label {
+                    transform: translateY(-13px);
+                    font-size: 13px;
+                    color: $red;
+                    font-weight: 600;
+                }
+            }
+            .form-label {
+                position: absolute;
+                padding: 0px 10px;
+                left: 0;
+                top: 17px;
+                z-index: 1;
+                font-size: $font-size-base;
+                pointer-events: none;
+                transition: all ease 0.4s;
+                color: $gray-200;
+                text-transform: capitalize;
+                font-weight: 400;
+                @include respond-below(lg) {
+                    font-size: $font-size-sm;
+                }
+            }
+            .form-input,
+            select,
+            textarea {
+                position: relative;
+                border: none;
+                border-bottom: 1px solid $gray-600;
+                border-radius: 0;
+                background-color: transparent;
+                font-size: $font-size-base;
+                font-weight: 400;
+                padding: 10px 30px 0 0 !important;
+                @include respond-below(lg) {
+                    font-size: $font-size-sm;
+                }
+            }
+            textarea {
+                &.form-input {
+                    padding: 20px 30px 0 0 !important;
+                }
+            }
+            .select-field {
+                &:after {
+                    font-size: $font-size-base;
+                    color: #777777;
+                    right: 7px;
+                }
+            }
+            .invalid-feedback {
+                position: absolute;
+                right: 0;
+                padding: 0px 10px;
+                margin-top: 2px;
+                font-size: 12px;
+            }
+            &.not-valid,
+            &.is-invalid {
+                &.focused {
+                    label,
+                    .form-input {
+                        color: $red;
+                        border-color: $red;
+                    }
+                }
+                label,
+                .form-input {
+                    color: $red;
+                    border-color: $red;
+                }
+                .invalid-feedback {
+                    display: block;
+                }
+            }
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: $gray-200;
+            font-size: 20px;
+            pointer-events: none;
+        }
+        input[type=submit] {
+            box-shadow: 0px 1px 5px 0px rgba($black, 0.3);
+        }
+        span {
+            color: $gray-100;
+        }
+    }
+    &.rocket-info-details {
+        .rocket-info {
+            &__one,
+            &__two {
+                .form-group {
+                    .invalid-feedback {
+                        position: absolute;
+                        right: 0;
+                        padding: 0px 10px;
+                        margin-top: 2px;
+                        font-size: 12px;
+                    }
+                    &.not-valid,
+                    &.is-invalid {
+                        &.focused {
+                            .form-control {
+                                border-color: $red;
+                                margin-bottom: 10px;
+                            }
+                        }
+                        .form-control {
+                            border-color: $red;
+                            margin-bottom: 10px;
+                        }
+                        .invalid-feedback {
+                            display: block;
+                            bottom: -12px;
+                        }
+                        .custom-radio-block {
+                            [type="radio"] {
+                                +label {
+                                    &:before {
+                                        border: 1px solid $red;
+                                    }
+                                }
+                            }
+                        }
+                        .select-field,
+                        .calendar-field {
+                            .invalid-feedback {
+                                padding: 0px 0px 0px 20px;
+                            }
+                        }
+                        .select2-container--default {
+                            .select2-selection--single {
+                                border-color: $red !important;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            &__three {
+                .rocket-info__line {
+                    .form-group {
+                        &.not-valid,
+                        &.is-invalid {
+                            .form-control {
+                                border-color: $red;
+                            }
+                            .select2-container {
+                                border: 1px solid $red;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &__four,
+            &__five,
+            &__six {
+                .form-group {
+                    &.not-valid,
+                    &.is-invalid {
+                        .form-input,
+                        .form-label {
+                            color: $gray-200;
+                        }
+                        .form-control {
+                            border-color: $red;
+                        }
+                        .select2-container--default {
+                            .select2-selection--single {
+                                border-color: $red !important;
+                            }
+                        }
+                        .invalid-feedback {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-weight: $label-font-weight;
+    font-family: $label-font-family;
+    font-size: $label-font-size;
+    text-transform: uppercase;
+    color: $label-color;
+    @include respond-below(lg) {
+        font-size: $font-size-sm;
+    }
+}
+
+input,
+textarea,
+button,
+select {
+    font-family: $input-font-family;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="button"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+textarea {
+    -webkit-appearance: none;
+    outline: none;
+}
+
+input[type="submit"],
+input[type="button"] {
+    padding: 13px 40px;
+    @include respond-below(md) {
+        padding: 10px 12px;
+    }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    height: $input-height-base;
+    padding: 0 20px !important;
+    color: $input-color;
+    font-weight: $input-font-weight;
+    font-size: $input-font-size;
+    background-color: $input-background-color;
+    border-radius: $input-radius;
+    border: 1px solid $input-bg;
+    &:focus {
+        box-shadow: none;
+        outline: none
+    }
+}
+
+textarea {
+    height: 75px;
+    padding: 15px !important;
+    resize: none;
+    overflow: auto;
+}
+
+.form-control {
+    border-color: $input-bg;
+}
+
+.form-control[readonly] {
+    background-color: $gray-300;
+}
+
+
+/* Remove default arrow */
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    &::-ms-expand {
+        display: none;
+    }
+    &::-ms-value {
+        background: none;
+        color: $input-color;
+    }
+}
+
+.select-field {
+    position: relative;
+    &:after {
+        content: 'f';
+        position: absolute;
+        pointer-events: none;
+        font-family: "rocket-transportation" !important;
+        line-height: 1;
+        color: $gray-200;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 17px;
+        font-size: 20px;
+        @include respond-below(sm) {
+            font-size: 15px;
+        }
+    }
+}
+
+.calendar-field {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        background: url('../images/calendar.svg') no-repeat center / cover;
+        width: 30px;
+        height: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        @include respond-below(sm) {
+            width: 25px;
+            height: 25px;
+            right: 15px;
+        }
+    }
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $input-color-placeholder !important;
+    opacity: 1 !important;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $input-color-placeholder !important;
+    opacity: 1 !important;
+}
+
+:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $input-color-placeholder !important;
+    opacity: 1 !important;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: $input-color-placeholder !important;
+    opacity: 1 !important;
+}
+
+
+/* For Firefox */
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+
+/* Webkit browsers like Safari and Chrome */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+// select2
+.select2 {
+    display: block !important;
+    width: 100% !important;
+    height: auto;
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+}
+
+.select2-container--default {
+    .select2-selection--single {
+        height: $input-height-base !important;
+        font-weight: 600;
+        display: flex !important;
+        align-items: center;
+        height: $input-height-base !important;
+        padding: 0 20px !important;
+        color: $input-color;
+        font-weight: $input-font-weight;
+        font-size: $input-font-size;
+        background-color: $input-background-color !important;
+        border-radius: $input-radius !important;
+        border: 1px solid $input-bg !important;
+        outline: none;
+        @include respond-below(sm) {
+            height: $input-height-base - 5px !important;
+        }
+        .select2-selection__arrow {
+            b {
+                display: none;
+            }
+        }
+        .select2-selection__rendered {
+            line-height: 28px;
+        }
+    }
+    .select2-results__option {
+        font-weight: 400;
+        padding: 10px 20px;
+        margin-bottom: 0;
+        font-size: $font-size-sm;
+        &:before {
+            display: none;
+        }
+        @include respond-below(xl) {
+            padding: 5px;
+        }
+        @include respond-below(lg) {
+            padding: 5px 10px;
+        }
+    }
+    .select2-results__option--highlighted[aria-selected] {
+        background-color: $purple !important;
+        color: $white !important;
+    }
+    .select2-search--dropdown {
+        // display: none;
+        background-color: $gray-500;
+        .select2-search__field {
+            border-radius: 0px !important;
+            font-size: 15px;
+            height: $input-height-small - 5;
+        }
+    }
+}
+
+.select2-container--open {
+    .select2-dropdown--below {
+        border: 1px solid $purple !important;
+        background-color: $gray-500;
+    }
+    .select2-dropdown {
+        border: 1px solid $purple !important;
+    }
+}
+
+.select-default-style {
+    .select2-container--default {
+        .select2-selection--single {
+            background-color: $white !important;
+            font-weight: 400;
+            padding: 0 !important;
+            border: none !important;
+            border-bottom: 1px solid $gray-600 !important;
+            border-radius: 0 !important;
+            .select2-selection__rendered {
+                font-size: $font-size-base;
+                padding-left: 0;
+                padding-right: 25px;
+                color: $gray-200;
+                @include respond-below(lg) {
+                    font-size: $font-size-sm;
+                }
+            }
+        }
+    }
+}
+.bootstrap-timepicker-widget {
+    table {
+        td {
+            input {
+                padding: 0 10px !important;
+                width: 45px !important;
+            }
+        }
+    }
+}
+    

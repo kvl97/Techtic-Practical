@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Services card of the site/application.
+// -----------------------------------------------------------------------------
+
+/*--- Services card ---*/
+.services-card {
+    .services-card-image {
+        display: block;
+        padding-top: calc(276 / 480 * 100%);
+        position: relative;
+        overflow: hidden;
+        transition: all ease 0.3s;
+
+        img {
+            transition: all ease 0.3s;
+        }
+
+        &:hover {
+            img {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .services-card-text {        
+        height: 100%;
+
+        h4 {
+            color: $gray;
+            font-weight: 700;
+
+            a {
+                color: $gray;
+                text-decoration: none;
+                transition: all ease 0.3s;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        p {
+            color: $gray-200;
+            font-size: $font-size-sm;
+        }
+
+        .btn-link {
+            margin-bottom: 0;
+            font-size: $font-size-base;
+            font-family: $font-family-heading;
+            font-weight: 700;
+            line-height: 1;
+            border: none;            
+        }
+    }    
+}

@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the About page.
+// -----------------------------------------------------------------------------
+
+.about-wrapper {
+
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: $font-family-base;
+        font-weight: 600;
+    }
+}
